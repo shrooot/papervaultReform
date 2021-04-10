@@ -1,0 +1,97 @@
+*
+{
+    margin:0%;
+    /* padding: 0%; */
+}
+nav
+{
+    background-image: linear-gradient(rgb(10, 0, 148), rgb(13, 36, 241));
+    /* height:10vw; */
+    /* padding: 2%; */
+}
+ ul{
+    list-style-type:none;
+    display: flex;
+    float:inline-start;
+    justify-content: flex-end;
+    /* padding: 2%; */
+    /* font-size: 25px; */
+}
+li{
+    padding:1%;
+    overflow:visible;
+    font-family:sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+li a{
+    color:white;
+    text-decoration: none;
+}
+@media screen and (max-width : 768px){
+
+    .line{
+        width: 30px;
+        height: 3px;
+        color: #ae5fce;
+        background: white;
+        margin: 5px;
+    }
+    nav{
+        position: relative;
+    }
+
+    .hamburger{
+        position:absolute;
+        cursor: pointer;
+        right: 5%;
+        /* top: 50%; */
+        transform: translate(-5% , -50%);
+        z-index: 2;
+        font-family:sans-serif;
+    }
+
+    .navlinks{
+        position: fixed;
+        background: rgb(13, 36, 241);
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        justify-content:flex-start;
+
+        /* list-style: square; */
+        clip-path: circle(150px at 90% -10%);    /*To add a mask.. Not a widely supported property so we add webkit*/
+        -webkit-clip-path: circle(100px at 90% -5%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .navlinks.open{
+        clip-path: circle(1100px at 90% 0%); 
+        -webkit-clip-path: circle(1100px at 100% 0%);
+        pointer-events: all;
+    }
+
+    .navlinks li{
+        opacity: 0;
+        padding: 30px;
+    }
+
+    .navlinks li a{
+        font-size: 25px;
+    font-family:sans-serif;
+    /* font-weight: 500; */
+    }
+
+    .navlinks li :nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .navlinks li :nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .navlinks li :nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    li.fade{
+        opacity: 1;
+    }
+}
