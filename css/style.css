@@ -1,7 +1,7 @@
-*
-{
-    margin:0%;
-    /* padding: 0%; */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 nav
 {
@@ -28,6 +28,64 @@ li a{
     color:white;
     text-decoration: none;
 }
+
+/* Grid styles start here */
+.grid-stuff {
+    font-family: "Roboto Condensed", monospace, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1em auto;
+    width: 80%;
+    max-width: 1100px;
+}
+
+.label-semester h1 {
+    padding-top: 0.75em;
+    font-size: 2em;
+}
+
+.label-semester p {
+    padding-bottom: 1.5em;
+    padding-top: 0.75em;
+    font-size: 1.5em;
+}
+
+.grid-stuff a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2em;
+    margin: auto;
+}
+
+.grid-card {
+    padding: 3em 0em;
+    background-image: linear-gradient(45deg, rgb(10, 0, 148), rgb(13, 36, 241));
+    border-radius: 20px;
+    border: 2px rgb(10, 3, 119) solid;
+    box-shadow: 0px 0px 10px 0px rgb(10, 3, 119);
+}
+
+.grid-card:hover,
+.grid-card:focus {
+    background-image: linear-gradient(45deg, rgb(9, 4, 77), rgb(6, 20, 143));
+    box-shadow: 0px 0px 0px 5px white,
+                0px 0px 0px 10px rgb(10, 3, 119);
+}
+
+@media only screen and (max-width: 400px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}
+/* Grid styles end here */
+
 @media screen and (max-width : 768px){
 
     .line{
