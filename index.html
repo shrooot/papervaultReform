@@ -11,46 +11,64 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+      integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o="
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
+    <header class="header">
+      <!-- navbar starts here -->
+      <nav class="main__navbar">
+        <div class="logo"><h1>PaperVault</h1></div>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <ul class="mainMenu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="/papervaultReform/request.html">Request Section</a></li>
+          
+          <div class="closeMenu"><i class="fa fa-times"></i></div>
+          <span class="icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-github"></i>
+          </span>
+        </ul>
+      </nav>
 
-    <!-- navbar starts here -->
-<header class="header">
-    <nav class="main__navbar">
-      <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+      <!-- about section -->
+
+      <div class="about__container">
+        <div class="child1">
+          <br>
+          All the resources you need,<br>
+          In one place.<br>
+        </div>
+        <div class="child2">
+          <img
+            src="images/logo.png"
+            class="logo__image"
+            alt="The logo of the website"
+          />
+        </div>
       </div>
-      <ul class="navlinks">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="/papervaultReform/request.html">Request Section</a></li>
-      </ul>
-    </nav>
-
-
-    <!-- about section -->
-
-    <div class="about__container">
-
-        <div class="child1"> <br> All the resources you need,<br> In one place.<br></div>
-        <div class="child2"><img src="images/logo.png" class="logo__image" alt="The logo of the website"></div>
-
-    </div>
-</header>
+    </header>
     <!-- Grid starts here -->
 
-
-    <section class="grid-stuff">
+    <section class="grid-stuff" style="margin-top: 5px;">
       <div class="label-semester">
         <h1>Select your Semester</h1>
         <p>Practice previous year papers and ace your exam prep</p>
       </div>
       <div class="grid-container">
-        <a href="/papervaultReform/sem/sem1.html" class="grid-card">Semester 1</a>
+        <a href="/papervaultReform/sem/sem1.html" class="grid-card"
+          >Semester 1</a
+        >
         <a href="#" class="grid-card">Semester 2</a>
         <a href="#" class="grid-card">Semester 3</a>
         <a href="#" class="grid-card">Semester 4</a>
