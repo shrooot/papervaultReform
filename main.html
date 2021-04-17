@@ -1,46 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Paper valut</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
-</head>
-<body>
-    <nav>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <ul class="navlinks">
-            <li> <a href="#">Home</a></li>
-            <li> <a href="#">About us</a></li>
-            <li> <a href="#">Contact Us</a></li>
-            <li> <a href="#">Request Section</a></li>
-        </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>PaperVault</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+
+    <!-- navbar starts here -->
+<header class="header">
+    <nav class="main__navbar">
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <ul class="navlinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="/request.html">Request Section</a></li>
+      </ul>
     </nav>
-    
+
+
+    <!-- about section -->
+
+    <div class="about__container">
+
+        <div class="child1"> <br> All the resources you need,<br> In one place.<br></div>
+        <div class="child2"><img src="images/logo.png" class="logo__image" alt="The logo of the website"></div>
+
+    </div>
+</header>
+    <!-- Grid starts here -->
+
+
     <section class="grid-stuff">
-        <div class="label-semester">
-            <h1>Select your Semester</h1>
-            <p>Practice previous year papers and ace your exam prep</p>
-        </div>
-        <div class="grid-container">
-                <a href="#" class="grid-card">Semester 1</a>
-                <a href="#" class="grid-card">Semester 2</a>
-                <a href="#" class="grid-card">Semester 3</a>
-                <a href="#" class="grid-card">Semester 4</a>
-                <a href="#" class="grid-card">Semester 5</a>
-                <a href="#" class="grid-card">Semester 6</a>
-                <a href="#" class="grid-card">Semester 7</a>
-                <a href="#" class="grid-card">Semester 8</a>
-        </div>
+      <div class="label-semester">
+        <h1>Select your Semester</h1>
+        <p>Practice previous year papers and ace your exam prep</p>
+      </div>
+      <div class="grid-container">
+        <a href="/papervaultReform/sem/sem1.html" class="grid-card">Semester 1</a>
+        <a href="#" class="grid-card">Semester 2</a>
+        <a href="#" class="grid-card">Semester 3</a>
+        <a href="#" class="grid-card">Semester 4</a>
+        <a href="#" class="grid-card">Semester 5</a>
+        <a href="#" class="grid-card">Semester 6</a>
+        <a href="#" class="grid-card">Semester 7</a>
+        <a href="#" class="grid-card">Semester 8</a>
+      </div>
     </section>
-    
+
+    <!-- Grid ends -->
+
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
