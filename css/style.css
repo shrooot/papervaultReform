@@ -3,31 +3,107 @@
     margin: 0;
     box-sizing: border-box;
 }
-nav
-{
-    background-image: linear-gradient(rgb(10, 0, 148), rgb(13, 36, 241));
-    /* height:10vw; */
-    /* padding: 2%; */
-}
- ul{
-    list-style-type:none;
+
+/* navbar section starts here */
+
+  .main__navbar {
+    background: #000;
+    color: #fff;
     display: flex;
-    float:inline-start;
-    justify-content: flex-end;
-    /* padding: 2%; */
-    /* font-size: 25px; */
-}
-li{
-    padding:1%;
-    overflow:visible;
-    font-family:sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-}
-li a{
-    color:white;
+    justify-content: space-between;
+    font-family: "Roboto Condensed", monospace, sans-serif;
+  }
+  nav .mainMenu {
+    display: flex;
+    list-style: none;
+  }
+  nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
     text-decoration: none;
-}
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  nav .mainMenu li a:hover {
+    background:tomato;
+  }
+  nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+  }
+  nav .mainMenu .closeMenu,
+  .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+  }
+  .fa-facebook:hover {
+    color: rgb(0, 110, 255);
+  }
+  .fa-twitter:hover {
+    color: rgb(86, 154, 243);
+  }
+  .fa-instagram:hover {
+    color: rgb(255, 0, 191);
+  }
+  .fa-github:hover {
+    color: rgb(255, 123, 0);
+  }
+  
+  nav .logo {
+    margin: 6px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 800px) {
+    nav .mainMenu {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      transition: top 1s ease;
+      display: none;
+    }
+    nav .mainMenu .closeMenu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    nav .openMenu {
+      display: block;
+    }
+    nav .mainMenu li a:hover {
+      background: none;
+      color: rgb(255, 123, 0);
+      font-size: 1.6rem;
+    }
+    .icons i {
+      display: inline-block;
+      padding: 12px;
+    }
+    .about__container{
+        margin-top: 200px;
+    }
+    .child1{
+        margin-bottom: 10px;
+    }
+    .logo__image{
+        height: 199px;
+        width: 300px;
+    }
+  }
+  
+/* navbar section ends here */
 
 /* Grid styles start here */
 .grid-stuff {
@@ -86,70 +162,32 @@ li a{
 }
 /* Grid styles end here */
 
-@media screen and (max-width : 768px){
 
-    .line{
-        width: 30px;
-        height: 3px;
-        color: #ae5fce;
-        background: white;
-        margin: 5px;
-    }
-    nav{
-        position: relative;
-    }
+/* The about section starts here */
 
-    .hamburger{
-        position:absolute;
-        cursor: pointer;
-        right: 5%;
-        /* top: 50%; */
-        transform: translate(-5% , -50%);
-        z-index: 2;
-        font-family:sans-serif;
-    }
+.header{
+    display: flex;
+    flex-direction: column;
+}
+.about__container{
+    /* margin-top: 1px; */
+    height: 200px;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap-reverse;
+    /* background-color: rgb(55, 73, 233); */
+    /* color: white; */
+    font-size: 40px;
+    border-bottom: 1px solid black;
+}
 
-    .navlinks{
-        position: fixed;
-        background: rgb(13, 36, 241);
-        height: 100vh;
-        width: 100%;
-        flex-direction: column;
-        justify-content:flex-start;
-
-        /* list-style: square; */
-        clip-path: circle(150px at 90% -10%);    /*To add a mask.. Not a widely supported property so we add webkit*/
-        -webkit-clip-path: circle(100px at 90% -5%);
-        transition: all 1s ease-out;
-        pointer-events: none;
-    }
-    .navlinks.open{
-        clip-path: circle(1100px at 90% 0%); 
-        -webkit-clip-path: circle(1100px at 100% 0%);
-        pointer-events: all;
-    }
-
-    .navlinks li{
-        opacity: 0;
-        padding: 30px;
-    }
-
-    .navlinks li a{
-        font-size: 25px;
-    font-family:sans-serif;
-    /* font-weight: 500; */
-    }
-
-    .navlinks li :nth-child(1){
-        transition: all 0.5s ease 0.2s;
-    }
-    .navlinks li :nth-child(2){
-        transition: all 0.5s ease 0.4s;
-    }
-    .navlinks li :nth-child(3){
-        transition: all 0.5s ease 0.6s;
-    }
-    li.fade{
-        opacity: 1;
-    }
+.child1{
+    margin-left: 50px;
+}
+.child2{
+    height: 199px;
+}
+.logo__image{
+    height: 199px;
+    width: 250px;
 }

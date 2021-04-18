@@ -1,12 +1,14 @@
-console.log("JavaScrpit for the navbar");
+const mainMenu = document.querySelector('.mainMenu');
+const closeMenu = document.querySelector('.closeMenu');
+const openMenu = document.querySelector('.openMenu');
 
-const hambuger = document.querySelector('.hamburger');
-const navlinks = document.querySelector('.navlinks');
-const links = document.querySelectorAll('.navlinks li');
+openMenu.addEventListener('click',show);
+closeMenu.addEventListener('click',close);
 
-hambuger.addEventListener('click',()=>{
-    navlinks.classList.toggle("open");
-    links.forEach(link => {
-        link.classList.toggle('fade');
-    });
-})
+function show(){
+    mainMenu.style.display = 'flex';
+    mainMenu.style.top = '0';
+}
+function close(){
+    mainMenu.style.top = '-100%';
+}
