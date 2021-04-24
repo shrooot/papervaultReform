@@ -1,193 +1,286 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to left, #29b6f6 , #0277bd);
+  z-index: -1;
 }
 
-/* navbar section starts here */
+.main__navbar {
+  /* display: grid;
+  grid-template-columns: 10% 1fr 1fr 10%; */
+  display: flex;
+  justify-content: space-around;
+  min-height: 10vh;
+  color: white;
+  align-items: center;
+}
 
-  .main__navbar {
-    background: #000;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    font-family: "Roboto Condensed", monospace, sans-serif;
-  }
-  nav .mainMenu {
-    display: flex;
-    list-style: none;
-  }
-  nav .mainMenu li a {
-    display: inline-block;
+.main__navbar li a:hover {
+  color: black;
+}
+
+#logo {
+  grid-column: 2/3;
+  font-size: 40px;
+}
+
+.mainMenu {
+  justify-self: end;
+  display: flex;
+  list-style: none;
+}
+
+.mainMenu li a{
+  display: inline-block;
     padding: 15px;
     text-decoration: none;
     color: #fff;
     font-size: 1.5rem;
+    font-weight: 550;
+}
+
+section {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+    height: 60%;
+    width: 100%;
+    position: relative;
+}
+
+.hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.headline {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    font-size: 100px;
+    transform: translate(-20% , -70%);
+    color: white;
+    z-index: 3;
+}
+
+/* =========================== */
+
+nav .mainMenu li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+nav .mainMenu li a:hover {
+  color: azure;
+  border-bottom: 1px solid gray;
+}
+nav .openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+nav .mainMenu .closeMenu,
+.icons i {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+.fa-facebook:hover {
+  color: rgb(0, 110, 255);
+}
+.fa-twitter:hover {
+  color: rgb(86, 154, 243);
+}
+.fa-instagram:hover {
+  color: rgb(255, 0, 191);
+}
+.fa-github:hover {
+  color: rgb(255, 123, 0);
+}
+
+nav .logo {
+  margin: 6px;
+  font-size: 25px;
+  cursor: pointer;
+}
+@media (max-width: 1320px) {
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    transition: top 1s ease;
+    display: none;
   }
-  nav .mainMenu li a:hover {
-    background:tomato;
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    justify-self: end;
   }
   nav .openMenu {
-    font-size: 2rem;
-    margin: 20px;
-    display: none;
-    cursor: pointer;
+    display: block;
   }
-  nav .mainMenu .closeMenu,
-  .icons i {
-    font-size: 2rem;
-    display: none;
-    cursor: pointer;
-  }
-  .fa-facebook:hover {
-    color: rgb(0, 110, 255);
-  }
-  .fa-twitter:hover {
-    color: rgb(86, 154, 243);
-  }
-  .fa-instagram:hover {
-    color: rgb(255, 0, 191);
-  }
-  .fa-github:hover {
+  nav .mainMenu li a:hover {
+    background: none;
     color: rgb(255, 123, 0);
+    font-size: 1.6rem;
   }
-  
-  nav .logo {
-    margin: 6px;
-    font-size: 25px;
-    cursor: pointer;
+  .icons i {
+    display: inline-block;
+    padding: 12px;
   }
+}
 
-  @media (max-width: 800px) {
-    nav .mainMenu {
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 10;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: #000;
-      transition: top 1s ease;
-      display: none;
-    }
-    nav .mainMenu .closeMenu {
-      display: block;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-    nav .openMenu {
-      display: block;
-    }
-    nav .mainMenu li a:hover {
-      background: none;
-      color: rgb(255, 123, 0);
-      font-size: 1.6rem;
-    }
-    .icons i {
-      display: inline-block;
-      padding: 12px;
-    }
-    .about__container{
-        margin-top: 200px;
-    }
-    .child1{
-        margin-bottom: 10px;
-    }
-    .logo__image{
-        height: 199px;
-        width: 300px;
-    }
-  }
-  
-/* navbar section ends here */
+.header{
+  margin-bottom: 100px;
+}
+/*-----------------------------------*/
 
-/* Grid styles start here */
 .grid-stuff {
-    font-family: "Roboto Condensed", monospace, sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 1em auto;
-    width: 80%;
-    max-width: 1100px;
+  font-family: "Roboto Condensed", monospace, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1em auto;
+  margin-top: 100px;
+  width: 80%;
+  max-width: 1100px;
 }
 
 .label-semester h1 {
-    padding-top: 0.75em;
-    font-size: 2em;
+  padding-top: 0.75em;
+  font-size: 2em;
 }
 
 .label-semester p {
-    padding-bottom: 1.5em;
-    padding-top: 0.75em;
-    font-size: 1.5em;
+  padding-bottom: 1.5em;
+  padding-top: 0.75em;
+  font-size: 1.5em;
 }
 
 .grid-stuff a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.4rem;
-    font-weight: 700;
+  text-decoration: none;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 2em;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2em;
+  margin: auto;
 }
 
 .grid-card {
-    padding: 3em 0em;
-    background-image: linear-gradient(45deg, rgb(10, 0, 148), rgb(13, 36, 241));
-    border-radius: 20px;
-    border: 2px rgb(10, 3, 119) solid;
-    box-shadow: 0px 0px 10px 0px rgb(10, 3, 119);
+  padding: 3em 0em;
+  background-image: linear-gradient(45deg, rgb(10, 0, 148), rgb(13, 36, 241));
+  border-radius: 20px;
+  border: 2px rgb(10, 3, 119) solid;
+  box-shadow: 0px 0px 10px 0px rgb(10, 3, 119);
 }
 
 .grid-card:hover,
 .grid-card:focus {
-    background-image: linear-gradient(45deg, rgb(9, 4, 77), rgb(6, 20, 143));
-    box-shadow: 0px 0px 0px 5px white,
-                0px 0px 0px 10px rgb(10, 3, 119);
+  background-image: linear-gradient(45deg, rgb(9, 4, 77), rgb(6, 20, 143));
+  box-shadow: 0px 0px 0px 5px white,
+              0px 0px 0px 10px rgb(10, 3, 119);
 }
 
 @media only screen and (max-width: 400px) {
-    .grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    }
-}
-/* Grid styles end here */
-
-
-/* The about section starts here */
-
-.header{
-    display: flex;
-    flex-direction: column;
-}
-.about__container{
-    /* margin-top: 1px; */
-    height: 200px;
-    display: flex;
-    justify-content:space-around;
-    flex-wrap: wrap-reverse;
-    /* background-color: rgb(55, 73, 233); */
-    /* color: white; */
-    font-size: 40px;
-    border-bottom: 1px solid black;
+  .grid-container {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
 }
 
-.child1{
-    margin-left: 50px;
+
+/*--------------------------------------------*/
+
+
+html {
+  height: 100%;
 }
-.child2{
-    height: 199px;
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
-.logo__image{
-    height: 199px;
-    width: 250px;
+
+footer {
+  margin-top: auto;
+  width: 100%;
+  background: #222222;
+  font-size: 0.9em;
+  font-family: "Roboto Condensed", monospace, sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer-icons {
+  font-size: 2em;
+  padding: 0.3em 0.5em;
+}
+
+.footer-text {
+  font-size: 1em;
+  font-weight: 300;
+  padding-bottom: 0.5em;
+}
+
+.footer-copyright {
+  background-color: black;
+  padding: 0.5em;
+  width: 100%;
+}
+
+footer a{
+  text-decoration: none;
+  color: white;
+  padding: 0em 0.3em;
+}
+.github-link:hover,
+.github-link:focus {
+  color: rgb(255, 153, 0);
+}
+
+.facebook-link:hover,
+.facebook-link:focus {
+  color: rgb(68, 109, 241);
+}
+
+.twitter-link:hover,
+.twitter-link:focus {
+  color: rgb(82, 172, 255);
+}
+
+.instagram-link:hover,
+.instagram-link:focus {
+  color: rgb(241, 93, 197);
 }
