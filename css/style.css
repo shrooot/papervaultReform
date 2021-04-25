@@ -81,6 +81,11 @@ section {
     z-index: 3;
 }
 
+@media (max-width : 700px) {
+    .headline{
+      font-size: 50px;
+    }
+}
 
 nav .mainMenu li a {
   display: inline-block;
